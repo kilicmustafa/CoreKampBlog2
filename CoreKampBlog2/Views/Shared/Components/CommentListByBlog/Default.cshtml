@@ -1,0 +1,36 @@
+﻿@model List<EntityLayer.Concrete.Comment>
+
+
+@{
+	bool varMi = false;
+
+
+}
+
+<div class="comment-top">
+						<h4>Comments</h4>
+						@foreach(var item in Model){
+		
+							{varMi = true;}
+						<div class="media">
+							<img src="~/web/images/t1.jpg" alt="" class="img-fluid" />
+							<div class="media-body">
+								<h5 class="mt-0">@item.CommentTitle </h5>
+								
+								<p>@item.CommentContent</p>
+
+								
+								</div>
+							</div>
+
+							}
+
+							@{
+								if(varMi == false){
+
+									<p>There is no commment! Be the first to comment </p>
+
+
+							}
+							}
+						</div>
